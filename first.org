@@ -1,0 +1,38 @@
+#+title: Org Basics
+#+DESCRIPTION: Org doc to learn org
+#+AUTHOR: Karttikeya Sinha
+
+* New Headline
+** Level 2
+*** Level 3
+**** Level 4
+***** Level 5
+** Rotate current subtree states: TAB
+** Rotate entire buffer between states: S-TAB
+** Close tree: zc
+** Open tree: zo
+** Fold everything: zM
+** Unfold everything: zR
+* Getting started in org
+Read org man with M-x
+** org-toggle-heading: SPC-m-h
+** org-toggle-item: SPC-m-i
+- Unordered list
+1. Ordered list
+* Some adv shit
+** Select element: vae
+** Del element: dae
+** Select subtree: vaR
+** Del subtree: daR
+** yank subtree: yiR
+* Inserting snippets
+** SPC-i-s
+** cpp:
+#+BEGIN_SRC cpp
+#include <iostream>
+
+int main() {
+    cout << "Hello";
+    return 0;
+}
+#+END_SRC
