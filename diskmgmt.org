@@ -33,9 +33,21 @@ eg: HDD, FDD (floppy)
   * Rotation causes required sector of back to come under head
   * Speed -> 7200 rpm - 10000 rpm
 - Each platter has 2 surfaces ( top & bottom ) which store data
-+ Each surface has own r/w head
+- Each surface has own r/w head
 **** How to Measure Disk Performance
 - Transfer rate: rate at which data flows between drive and comp
 - Positioning time ( Random Access time ):
   * Time to move disk arm to desired cylinder ( seek time )
   * time for desired sector to rotate under the disk head ( rotational latency )
+
+* Disk Scheduling
+- Operating system is responsible for using hardware efficiently.
+  - having fast access time and disk bandwidth
+- Primary objective: Minimise seek time
+- Seek time -> Seek distance
+- W = (data tranferred)/(time)
+** FCFS ( First come first serve )
+** SSTF ( Shortest seek time first )
+** SCAN/Elevator
+** C-SCAN ( 1 way elevator )
+** C-LOOK
