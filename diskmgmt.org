@@ -1,0 +1,41 @@
+#+title: Disk Management
+#+author: Karttikeya Sinha
+#+date: <2024-11-20 Wed>
+#+description: Disk Management OS lect
+
+* Secondary Memory
+- Lowest cost
+- Highest Capacity
+- Slowest access
+- For keeping data in long term storage
+- Not in immediate use.
+
+** Two types
+1. Sequential access: Accessed in linear sequence
+   eg: magnetic tape
+2. Direct access: random access
+   eg: rotating drums, disks, CD-ROM
+
+*** Magnetic Disk:
+- Higher cap and reliability
+- direct access
+- Circular plate, created with magnetic oxide layer
+eg: HDD, FDD (floppy)
+- Data represented as magnetized clusters
+
+**** Organisation of Disk
+- disk divided into platters
+- each platter consists of concentric circles = TRACKS
+- track divided into SECTORS ( smallest division in disk )
+- Each platter has a mechanical arm = r/w head
+  * Used to read/write from/to disk
+  * Head has to reach at a particular track and then wait for rotation of platter
+  * Rotation causes required sector of back to come under head
+  * Speed -> 7200 rpm - 10000 rpm
+- Each platter has 2 surfaces ( top & bottom ) which store data
++ Each surface has own r/w head
+**** How to Measure Disk Performance
+- Transfer rate: rate at which data flows between drive and comp
+- Positioning time ( Random Access time ):
+  * Time to move disk arm to desired cylinder ( seek time )
+  * time for desired sector to rotate under the disk head ( rotational latency )
