@@ -22,6 +22,7 @@
 - Circular plate, created with magnetic oxide layer
 eg: HDD, FDD (floppy)
 - Data represented as magnetized clusters
+
 **** Organisation of Disk
 - disk divided into platters
 - each platter consists of concentric circles = TRACKS
@@ -38,3 +39,15 @@ eg: HDD, FDD (floppy)
 - Positioning time ( Random Access time ):
   * Time to move disk arm to desired cylinder ( seek time )
   * time for desired sector to rotate under the disk head ( rotational latency )
+
+* Disk Scheduling
+- Operating system is responsible for using hardware efficiently.
+  - having fast access time and disk bandwidth
+- Primary objective: Minimise seek time
+- Seek time -> Seek distance
+- W = (data tranferred)/(time)
+** FCFS ( First come first serve )
+** SSTF ( Shortest seek time first )
+** SCAN/Elevator
+** C-SCAN ( 1 way elevator )
+** C-LOOK
