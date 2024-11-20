@@ -22,7 +22,6 @@
 - Circular plate, created with magnetic oxide layer
 eg: HDD, FDD (floppy)
 - Data represented as magnetized clusters
-
 **** Organisation of Disk
 - disk divided into platters
 - each platter consists of concentric circles = TRACKS
