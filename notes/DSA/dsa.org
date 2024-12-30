@@ -82,6 +82,31 @@ public:
 
 * Union Find (Disjoint Set)
 - Keeps track of elements which are split into one or more disjoint sets.
+- We do not "un-union" elements. This would be inefficient as we would have to update all children of the nodes.
+- Number of components = number of roots remaining. Number of root nodes never increases.
 - 2 primary operations:
   1. Find
   2. Union
+** Complexity
+- Construction: O(n)
+- Union: a(n)
+- Find: a(n)
+- Get component size: a(n)
+- Check if connected: a(n)
+- Count components: O(1)
+( a(n) - Amortized constant time )
+** Kruskal's Algo:
+Given a graph G = (V, E) we want to find a Minimum Spanning Tree in the graph (may not be unique).
+- A Minimum spanning tree is a subset of the edges which connect all vertices in the graph with the minimal total edge cost.
+*** How
+- Sort edges by ascending edge weight
+- Walk through sorted edges and look at the 2 nodes the edge belongs to. If ndoes are already unified we don't include this edge, otherwise we include it and unify the nodes.
+- Algo terminates when every edge has been processed or all vertices have been unified
+**** Creating Union Find (no path compression)
+- First construct bijection (mapping) between your objects and integers in the range [0, n)
+  ( step not necessary but will allow to construct array-based union find )
+***** Find
+- To find which component a particular element belongs to find the root of that component bby following the parent nodes until a self loop is reached.
+***** Union
+- To unify 2 elements find which are the root nodes of each component and if the root nodes are different, make one of the root nodes the parent of the other.
+**** Union Find (Path Compression)
